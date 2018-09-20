@@ -2,10 +2,6 @@ const _utils = require('../util/index');
 
 function rules (arr) {
 
-  console.log(_utils._checkRepeat(arr)); // WORKS
-  console.log('\n')
-  console.log('Flush testing: ', _utils._inOrder(arr) === false && _utils._sameSuit(arr))
-
   // ROYAL FLUSH
   if ( _utils._inOrder(arr) && _utils._sameSuit(arr) && ( _utils._maxRank(arr) === 13 )  && ( _utils._minRank(arr) === 10 ) ) {
       return console.log(`It's Royal Flush!!!`, arr);
